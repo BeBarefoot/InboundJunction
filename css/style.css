@@ -1,0 +1,489 @@
+* {
+    margin: 0
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Roboto', Helvetica, sans-serif;
+    font-weight: normal;
+    padding: 80px, 40px;
+}
+
+header {
+    margin-bottom: 120px;
+}
+
+header>div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header>div a {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+}
+
+#Twitter {
+    margin-right: 20px;
+}
+
+#Twitter img {
+    width: 32px;
+}
+
+#Facebook img {
+    height: 30px;
+}
+
+h1 {
+    margin-bottom: 0;
+    line-height: 63px;
+    font-family: 'Roboto Slab', Helvetica, sans-serif;
+    font-size: 48px;
+    font-weight: 100;
+    color: #574751;
+}
+
+h2 {
+    line-height: 21px;
+    font-size: 18px;
+    color: #574751;
+}
+
+h3 {
+    line-height: 60px;
+    font-family: 'Roboto Slab', Helvetica, sans-serif;
+    font-size: 18px;
+    color: #bcb5b9;
+}
+
+h4 {
+    line-height: 16px;
+    font-family: 'Roboto Slab', Helvetica, sans-serif;
+    font-size: 14px;
+    color: #bcb5b9;
+}
+
+#colorPalette {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 6px 0 24px;
+}
+
+#colorPalette:empty {
+    display: none;
+}
+
+.color {
+    display: flex;
+    width: 254px;
+    height: 64px;
+    padding: 12px 6px 26px 0;
+}
+
+.colorPreview {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    margin-right: 18px;
+    border-radius: 50%;
+}
+
+.color.bright .colorPreview {
+    border: 2px solid rgba(0, 0, 0, 0.15);
+}
+
+.colorName {
+    width: 176px;
+    margin-bottom: 8px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    line-height: 19px;
+    font-size: 16px;
+    color: #574751;
+}
+
+.colorHex {
+    margin-bottom: 2px;
+    line-height: 19px;
+    font-size: 16px;
+    color: #bcb5b9;
+}
+
+.colorRGB {
+    line-height: 16px;
+    font-size: 14px;
+    color: #bcb5b9;
+}
+
+#screens {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    margin-top: 24px;
+}
+
+.screen {
+    position: relative;
+    width: 320px;
+    margin-bottom: 40px;
+}
+
+.screenLink {
+    position: relative;
+    display: block;
+}
+
+.imageFrame {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(188, 181, 185, 0.3);
+    pointer-events: none;
+}
+
+.screenImage {
+    display: block;
+    width: 100%;
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.screenInfo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 18px;
+}
+
+.screenName {
+    flex: 1;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.screenLikes {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    max-width: 50%;
+    margin-left: 10px;
+}
+
+.likeCount {
+    margin-right: 6px;
+    line-height: 19px;
+    font-size: 16px;
+    color: #ee6723;
+}
+
+.likeScreenButton {
+    border: transparent;
+    background: transparent;
+    cursor: pointer;
+    line-height: 0;
+}
+
+.likeScreenButton.liked path {
+    fill: #ee6723;
+}
+
+#fontBook {
+    margin: 0 0 24px;
+    columns: 2;
+    column-gap: 0;
+}
+
+.font {
+    min-width: 260px;
+    padding: 12px 48px 12px 0;
+    page-break-inside: avoid;
+    break-inside: avoid;
+}
+
+.font .fontName {
+    font-family: 'Roboto';
+    font-size: 36px;
+    font-weight: 100;
+    font-style: normal;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.font .fontName,
+.font .mainInfo {
+    color: #574751;
+}
+
+.font .fontStyleDetail {
+    font-family: 'Roboto';
+    padding: 6px 0 0;
+}
+
+.font .mainInfo {
+    font-size: 15px;
+    line-height: 18px;
+}
+
+.font .subInfo {
+    font-size: 14px;
+    line-height: 16px;
+    color: #bcb5b9;
+}
+
+@media screen and (min-width: 1440px) {
+    header,
+    main {
+        width: 1040px;
+    }
+    .screen:nth-child(3n) {
+        margin-right: 0;
+    }
+    .screen:not(:nth-child(3n)) {
+        margin-right: 40px;
+    }
+}
+
+@media screen and (min-width: 1800px) {
+    header,
+    main {
+        width: 1400px;
+    }
+    .screen:nth-child(4n) {
+        margin-right: 0;
+    }
+    .screen:not(:nth-child(4n)) {
+        margin-right: 40px;
+    }
+}
+
+@media screen and (min-width: 2160px) {
+    header,
+    main {
+        width: 1760px;
+    }
+    .screen:nth-child(5n) {
+        margin-right: 0;
+    }
+    .screen:not(:nth-child(5n)) {
+        margin-right: 40px;
+    }
+}
+
+@media screen and (min-width: 2520px) {
+    header,
+    main {
+        width: 2120px;
+    }
+    .screen:nth-child(6n) {
+        margin-right: 0;
+    }
+    .screen:not(:nth-child(6n)) {
+        margin-right: 40px;
+    }
+}
+
+@media screen and (min-width: 2880px) {
+    header,
+    main {
+        width: 2480px;
+    }
+    .screen:nth-child(7n) {
+        margin-right: 0;
+    }
+    .screen:not(:nth-child(7n)) {
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    header,
+    main {
+        width: 1040px;
+    }
+    .screen:nth-child(3n) {
+        margin-right: 0;
+    }
+    .screen:not(:nth-child(3n)) {
+        margin-right: 40px;
+    }
+}
+
+@media screen and (max-width: 1120px) {
+    body {
+        padding: 80px 40px;
+    }
+    header,
+    main {
+        width: 100%;
+    }
+    .screen {
+        width: calc(100vw / 3 - 160px / 3);
+    }
+    .screen:nth-child(3n) {
+        margin-right: 0;
+    }
+    .screen:not(:nth-child(3n)) {
+        margin-right: 40px;
+    }
+    .screenImage {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    body {
+        padding: 80px 20px;
+    }
+    header {
+        margin-bottom: 80px;
+    }
+    h1 {
+        line-height: 48px;
+        font-size: 36px;
+    }
+    .screen {
+        width: calc(100vw / 3 - 80px / 3);
+    }
+    .screen:not(:nth-child(3n)) {
+        margin-right: 20px;
+    }
+    .likeCount {
+        margin-right: 2px;
+        line-height: 16px;
+        font-size: 14px;
+    }
+    .font {
+        padding-right: 12px;
+    }
+}
+
+@media screen and (max-width: 560px) {
+    body {
+        padding: 60px 20px;
+    }
+    header {
+        margin-bottom: 60px;
+    }
+    header>div a {
+        width: 24px;
+        height: 24px;
+    }
+    #Twitter {
+        margin-right: 16px;
+    }
+    #Twitter img {
+        width: 24px;
+    }
+    #Facebook img {
+        height: 24px;
+    }
+    h1 {
+        line-height: 32px;
+        font-size: 24px;
+    }
+    h2 {
+        line-height: 19px;
+        font-size: 16px;
+    }
+    h3 {
+        line-height: 40px;
+        font-size: 18px;
+    }
+    #colorPalette {
+        width: 505px;
+        margin: 12px 0 24px;
+    }
+    .color {
+        width: auto;
+        height: auto;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    .color:nth-child(7n) {
+        margin-right: 0;
+    }
+    .color:not(:nth-child(7n)) {
+        margin-right: 20px;
+    }
+    .colorPreview {
+        width: 55px;
+        height: 55px;
+        margin: 0;
+    }
+    #screens {
+        margin-top: 12px;
+    }
+    .screen {
+        width: calc(100vw / 3 - 44px / 3);
+        margin-bottom: 2px;
+    }
+    .screen:nth-child(3n) {
+        margin-right: 0;
+    }
+    .screen:not(:nth-child(3n)) {
+        margin-right: 2px;
+    }
+    .screenImage {
+        width: 100%;
+    }
+    #fontBook {
+        -webkit-column-count: 1;
+        -moz-column-count: 1;
+        column-count: 1;
+    }
+    .font {
+        padding-right: 0;
+    }
+    .font .fontStyleDetail {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 545px) {
+    #colorPalette {
+        width: 430px;
+    }
+    .color:nth-child(6n) {
+        margin-right: 0;
+    }
+    .color:not(:nth-child(6n)) {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 470px) {
+    #colorPalette {
+        width: 355px;
+    }
+    .color:nth-child(5n) {
+        margin-right: 0;
+    }
+    .color:not(:nth-child(5n)) {
+        margin-right: 20px;
+    }
+}
+
+@media screen and (max-width: 395px) {
+    #colorPalette {
+        width: 280px;
+    }
+    .color:nth-child(4n) {
+        margin-right: 0;
+    }
+    .color:not(:nth-child(4n)) {
+        margin-right: 20px;
+    }
+}
